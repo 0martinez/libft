@@ -6,13 +6,13 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 20:19:11 by omartine          #+#    #+#             */
-/*   Updated: 2021/09/16 20:47:22 by omartine         ###   ########.fr       */
+/*   Updated: 2021/09/16 20:58:31 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(char x)
 {
-	if (x >= 'A' && x <= 'Z' || x >='a' && x <= 'z')
+	if ((x >= 'A' && x <= 'Z') || (x >= 'a' && x <= 'z'))
 		return (1);
 	return (0);
 }
