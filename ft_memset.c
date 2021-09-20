@@ -6,7 +6,7 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 20:43:49 by omartine          #+#    #+#             */
-/*   Updated: 2021/09/20 19:16:57 by omartine         ###   ########.fr       */
+/*   Updated: 2021/09/20 20:37:37 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,11 @@ void	*ft_memset(void *str, int c, int size)
 	}
 	return ((void *)ptr);
 }
+/*
 int main(void)
 {
 	char str[] = "hola adios";
 	ft_memset(str, '$', 4);
 	printf("%s", str);
 	return (0);
-}
+}*/

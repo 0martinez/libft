@@ -6,7 +6,7 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 17:17:00 by omartine          #+#    #+#             */
-/*   Updated: 2021/09/20 18:22:32 by omartine         ###   ########.fr       */
+/*   Updated: 2021/09/20 20:36:44 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	}
 	return (0);
 }
-
+/*
 int main(void)
 {
 	const char	str[] = "www.tutorialspoint.com";
@@ -39,4 +39,4 @@ int main(void)
 	ret = ft_memchr(str, ch, strlen(str));
 	printf("String after |%c| is - |%s|\n", ch, ret);
 	return (0);
-}
+}*/

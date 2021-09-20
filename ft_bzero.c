@@ -6,13 +6,13 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 18:48:33 by omartine          #+#    #+#             */
-/*   Updated: 2021/09/20 19:16:17 by omartine         ###   ########.fr       */
+/*   Updated: 2021/09/20 21:01:06 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	ft_bero(void *str, size_t n)
+void	ft_bzero(void *str, size_t n)
 {
 	unsigned char	*ptr;
 	size_t			i;
@@ -24,5 +24,4 @@ void	ft_bero(void *str, size_t n)
 		ptr[i] = 0;
 		i++;
 	}
-	return ((void *)ptr);
 }
