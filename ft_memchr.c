@@ -1,35 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/17 20:43:49 by omartine          #+#    #+#             */
-/*   Updated: 2021/09/20 19:16:57 by omartine         ###   ########.fr       */
+/*   Created: 2021/09/20 17:17:00 by omartine          #+#    #+#             */
+/*   Updated: 2021/09/20 18:22:32 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <string.h>
 
-void	*ft_memset(void *str, int c, int size)
+void	*ft_memchr(const void *str, int c, size_t n)
 {
-	int				i;
+	size_t			i;
 	unsigned char	*ptr;
 
 	ptr = (unsigned char *)str;
 	i = 0;
-	while (i != size)
+	while (ptr[i] != 0 || i != n)
 	{
-		ptr[i] = c;
+		if (c == ptr[i])
+			return ((void *)ptr + i);
 		i++;
 	}
-	return ((void *)ptr);
+	return (0);
 }
+
 int main(void)
 {
-	char str[] = "hola adios";
-	ft_memset(str, '$', 4);
-	printf("%s", str);
+	const char	str[] = "www.tutorialspoint.com";
+	const char	ch = '.';
+	char		*ret;
+
+	//ret = memchr(str, ch, strlen(str));
+	ret = ft_memchr(str, ch, strlen(str));
+	printf("String after |%c| is - |%s|\n", ch, ret);
 	return (0);
 }
