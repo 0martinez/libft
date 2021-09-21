@@ -6,11 +6,12 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 19:10:01 by omartine          #+#    #+#             */
-/*   Updated: 2021/09/17 20:39:16 by omartine         ###   ########.fr       */
+/*   Updated: 2021/09/21 18:04:16 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
 
 int	ft_atoi(const char *str)
 {
@@ -24,23 +25,27 @@ int	ft_atoi(const char *str)
 	while (str[i] != 0 && (str[i] == 32 || str[i] == '\t' || str[i] == '\n'
 			|| str[i] == '\r' || str[i] == '\v' || str[i] == '\f'))
 		i++;
-	if (str[i] != 0 && str[i] == '-')
+	if (str[i] == '-' || str[i] == '+')
 	{
-		simb = -1;
+		if (str[i] == '-')
+			simb = -1;
 		i++;
 	}
 	while (str[i] != 0)
 	{
-		num = (num * 10) + (str[i] - '0');
+		if (str[i] >= '0' && str[i] <= '9')
+			num = (num * 10) + (str[i] - '0');
+		else
+			break ;
 		i++;
 	}
 	return (simb * num);
 }
-/*int main()
+
+int main()
 {
-	char a[] = "        2222245";
-	int i;
-	i = ft_atoi(a);
-	printf("%d", i);
+	char a[] = "+9999999999999";
+	printf("%d\n", ft_atoi(a));
+	printf("%d", atoi(a));
 	return 0;
-}*/
+}

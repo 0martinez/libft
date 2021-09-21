@@ -22,11 +22,11 @@ NAME	= libft.a
 INCLUDE	= libft.h
 SRCS	= ft_isalpha.c ft_isdigit.c ft_isascii.c ft_isprint.c \
 		  	ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c\
-			ft_strchr.c \
+			ft_strchr.c ft_isalnum.c\
 			ft_memchr.c\
 			ft_atoi.c\
-			
-			
+
+
 
 OBJS	= $(SRCS:.c=.o)
 
@@ -38,14 +38,14 @@ $(NAME):	$(OBJS) $(INCLUDE)
 			$(LIB2) $(NAME)
 
 bonus:		$(NAME) $(BONUS_O)
-			$(LIB1) $(NAME) 
+			$(LIB1) $(NAME)
 			$(LIB2) $(NAME)
-			
+
 .c.o:
 			$(CC) $(CFLAGS) -I$(INCLUDE) -c $< -o $(<:.c=.o)
-			
+
 clean:
-			$(RM) $(OBJS) 
+			$(RM) $(OBJS)
 
 fclean:		clean
 			$(RM) $(NAME)

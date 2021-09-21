@@ -1,28 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/17 18:43:05 by omartine          #+#    #+#             */
-/*   Updated: 2021/09/21 18:29:50 by omartine         ###   ########.fr       */
+/*   Created: 2021/09/21 18:32:11 by omartine          #+#    #+#             */
+/*   Updated: 2021/09/21 18:38:06 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
-char	ft_strchr(const char *str, char x)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	i;
-
-	i = 0;
-	while (str[i] != 0)
-	{
-		if (str[i] == x)
-			return (str[i]);
-		i++;
-	}
-	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 20:30:20 by omartine          #+#    #+#             */
-/*   Updated: 2021/09/20 21:11:37 by omartine         ###   ########.fr       */
+/*   Updated: 2021/09/21 16:59:45 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,7 @@ void	*ft_memset(void *str, int c, int size);
 char	ft_strchr(char *str, char x);
 
 int		ft_strlen(char *x);
+
+int		ft_isalnum(int x);
 
 #endif
