@@ -6,7 +6,7 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 19:10:01 by omartine          #+#    #+#             */
-/*   Updated: 2021/09/21 18:04:16 by omartine         ###   ########.fr       */
+/*   Updated: 2021/09/21 20:16:43 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,10 @@ int	ft_atoi(const char *str)
 	return (simb * num);
 }
 
-int main()
+/*int main()
 {
 	char a[] = "+9999999999999";
 	printf("%d\n", ft_atoi(a));
 	printf("%d", atoi(a));
 	return 0;
-}
+}*/

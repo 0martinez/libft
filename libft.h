@@ -6,7 +6,7 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 20:30:20 by omartine          #+#    #+#             */
-/*   Updated: 2021/09/21 16:59:45 by omartine         ###   ########.fr       */
+/*   Updated: 2021/09/21 20:10:33 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,9 @@ char	ft_strchr(char *str, char x);
 int		ft_strlen(char *x);
 
 int		ft_isalnum(int x);
+
+int		ft_toupper(int x);
+
+int		ft_tolower(int x);
 
 #endif

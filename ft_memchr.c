@@ -6,7 +6,7 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 17:17:00 by omartine          #+#    #+#             */
-/*   Updated: 2021/09/20 20:36:44 by omartine         ###   ########.fr       */
+/*   Updated: 2021/09/21 21:12:25 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ void	*ft_memchr(const void *str, int c, size_t n)
 		if (c == ptr[i])
 			return ((void *)ptr + i);
 		i++;
+		if (c == ptr[i])
+			return ((void *)ptr + i);
 	}
 	return (0);
 }

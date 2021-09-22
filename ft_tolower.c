@@ -1,39 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/17 18:43:05 by omartine          #+#    #+#             */
-/*   Updated: 2021/09/21 20:59:54 by omartine         ###   ########.fr       */
+/*   Created: 2021/09/21 20:05:36 by omartine          #+#    #+#             */
+/*   Updated: 2021/09/21 20:09:25 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
-char	*ft_strchr(const char *str, int x)
+int	ft_tolower(int x)
 {
-	size_t	i;
-
-	i = 0;
-	while (str[i] != 0)
-	{
-		if (str[i] == x)
-			return ((char *)str + i);
-		i++;
-		if (str[i] == x)
-			return ((char *)str + i);
-	}
-	return (0);
+	if (x >= 'A' && x <= 'Z')
+		return (x + 32);
+	return (x);
 }
-/*
-int	main(void)
-{
-	char	a[] = "abcde";
-	printf("%s\n", ft_strchr(a, 'b'));
-	printf("%s", strchr(a, 'b'));
-	return (0);
-}*/
