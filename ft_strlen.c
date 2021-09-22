@@ -6,18 +6,18 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 18:25:13 by omartine          #+#    #+#             */
-/*   Updated: 2021/09/17 18:38:13 by omartine         ###   ########.fr       */
+/*   Updated: 2021/09/22 20:23:00 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_strlen(char *x)
 {
 	int	i;
 
 	i = 0;
-	while (x[i] != '\0')
+	while (x[i] != 0)
 		i++;
 	return (i);
 }

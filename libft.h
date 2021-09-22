@@ -6,7 +6,7 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 20:30:20 by omartine          #+#    #+#             */
-/*   Updated: 2021/09/22 17:00:12 by omartine         ###   ########.fr       */
+/*   Updated: 2021/09/22 19:35:35 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,7 @@ int		ft_toupper(int x);
 int		ft_tolower(int x);
 
 void	*ft_memmove(void *dst, const void *src, size_t len);
+
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 
 #endif
