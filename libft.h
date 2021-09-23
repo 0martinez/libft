@@ -6,7 +6,7 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 20:30:20 by omartine          #+#    #+#             */
-/*   Updated: 2021/09/22 19:35:35 by omartine         ###   ########.fr       */
+/*   Updated: 2021/09/23 19:08:45 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int		ft_isdigit(int x);
 
 int		ft_isprint(int x);
 
-void	*ft_memchr(const void *str, int c, size_t n);
+void	*ft_memchr(const void *s, int c, size_t n);
 
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 
@@ -48,5 +48,7 @@ int		ft_tolower(int x);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 
 #endif

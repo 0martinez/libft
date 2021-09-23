@@ -6,7 +6,7 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 18:32:11 by omartine          #+#    #+#             */
-/*   Updated: 2021/09/22 21:15:14 by omartine         ###   ########.fr       */
+/*   Updated: 2021/09/23 18:14:18 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	dest_length;
 	size_t	src_length;
 
-	src_length = ft_strlen(src);
+	src_length = ft_strlen((char *)src);
 	dest_length = ft_strlen(dst);
 	j = dest_length;
 	i = 0;
@@ -37,7 +37,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dest_length = size;
 	return (dest_length + src_length);
 }
-
+/*
 int main(void)
 {
 	char first[] = "This is ";
@@ -57,4 +57,4 @@ int main(void)
 		puts("String was fully copied");
 
 	return(0);
-}
+}*/
