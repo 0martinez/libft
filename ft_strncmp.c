@@ -1,51 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/24 17:35:19 by omartine          #+#    #+#             */
-/*   Updated: 2021/09/24 19:11:47 by omartine         ###   ########.fr       */
+/*   Created: 2021/09/24 16:58:31 by omartine          #+#    #+#             */
+/*   Updated: 2021/09/24 17:34:28 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
-	size_t	j;
-	size_t	flg;
 
 	i = 0;
-	j = 0;
-	flg = 0;
-	while (s[i] != 0)
+	while (i < n && (s1[i] != 0 || s2[i] != 0))
 	{
-		if (s[i] == c)
-		{
-			j = i;
-			flg++;
-		}
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
 		i++;
-		if (s[i] == c)
-		{
-			j = i;
-			flg++;
-		}
 	}
-	if (flg != 0)
-		return ((char *)s + j);
 	return (0);
 }
-
-int main(void)
+/*
+int	main(void)
 {
-	char *src = "abbbbbbbb";
-	char *d1 = strrchr(src, 'a');
-	char *d2 = ft_strrchr(src, 'a');
-	printf("%s\n", d1);
-	printf("%s", d2);
+	char	str1[15];
+	char	str2[15];
+	int		ret;
+
+	strcpy(str1, "abcdef");
+	strcpy(str2, "ABCDEF");
+	ret = ft_strncmp(str1, str2, 4);
+	printf("%i\n", ret);
+	if (ret < 0)
+		printf("str1 is less than str2");
+	else if (ret > 0)
+		printf("str2 is less than str1");
+	else
+		printf("str1 is equal to str2");
 	return (0);
-}
+}*/

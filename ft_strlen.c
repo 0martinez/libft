@@ -6,7 +6,7 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 18:25:13 by omartine          #+#    #+#             */
-/*   Updated: 2021/09/22 20:23:00 by omartine         ###   ########.fr       */
+/*   Updated: 2021/09/24 19:05:10 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,3 +21,9 @@ int	ft_strlen(char *x)
 		i++;
 	return (i);
 }
+/*
+int	main(void)
+{
+	printf("%d", ft_strlen(""));
+	return (0);
+}*/
