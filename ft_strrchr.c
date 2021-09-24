@@ -6,7 +6,7 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 17:35:19 by omartine          #+#    #+#             */
-/*   Updated: 2021/09/24 19:11:47 by omartine         ###   ########.fr       */
+/*   Updated: 2021/09/24 21:45:29 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)s + j);
 	return (0);
 }
-
+/*
 int main(void)
 {
 	char *src = "abbbbbbbb";
@@ -48,4 +48,4 @@ int main(void)
 	printf("%s\n", d1);
 	printf("%s", d2);
 	return (0);
-}
+}*/
