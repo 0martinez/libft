@@ -1,29 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/17 18:25:13 by omartine          #+#    #+#             */
-/*   Updated: 2021/09/27 17:21:56 by omartine         ###   ########.fr       */
+/*   Created: 2021/09/27 17:00:24 by omartine          #+#    #+#             */
+/*   Updated: 2021/09/27 17:33:49 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *x)
+char	*ft_strdup(const char *s)
 {
 	size_t	i;
+	char	*aux;
 
+	aux = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	i = 0;
-	while (x[i] != 0)
+	if (!aux)
+		return (0);
+	while (s[i] != 0)
+	{
+		aux[i] = s[i];
 		i++;
-	return (i);
+	}
+	aux[i] = 0;
+	return (aux);
 }
 /*
-int	main(void)
+int main(void)
 {
-	printf("%d", ft_strlen(""));
-	return (0);
+	char *str;
+	char *tmp = "I malloc so I am.";
+
+	printf("%s", str = ft_strdup(tmp));
+	return 0;
 }*/

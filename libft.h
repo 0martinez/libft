@@ -6,7 +6,7 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 20:30:20 by omartine          #+#    #+#             */
-/*   Updated: 2021/09/24 17:40:55 by omartine         ###   ########.fr       */
+/*   Updated: 2021/09/27 18:34:31 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	*ft_memset(void *str, int c, int size);
 
 char	ft_strchr(char *str, char x);
 
-int		ft_strlen(char *x);
+size_t	ft_strlen(const char *x);
 
 int		ft_isalnum(int x);
 
@@ -56,5 +56,11 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 char	*ft_strrchr(const char *s, int c);
+
+char	*ft_strnstr(const char *str, const char *dst, size_t len);
+
+char	*ft_strdup(const char *s);
+
+void	*ft_calloc(size_t count, size_t size);
 
 #endif
