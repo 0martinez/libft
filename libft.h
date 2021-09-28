@@ -6,7 +6,7 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 20:30:20 by omartine          #+#    #+#             */
-/*   Updated: 2021/09/27 18:34:31 by omartine         ###   ########.fr       */
+/*   Updated: 2021/09/28 20:38:32 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,9 @@ char	*ft_strnstr(const char *str, const char *dst, size_t len);
 char	*ft_strdup(const char *s);
 
 void	*ft_calloc(size_t count, size_t size);
+
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+
+char	*ft_strjoin(char const *s1, char const *s2);
 
 #endif
