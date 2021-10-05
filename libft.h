@@ -6,7 +6,7 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 20:30:20 by omartine          #+#    #+#             */
-/*   Updated: 2021/09/30 16:13:33 by omartine         ###   ########.fr       */
+/*   Updated: 2021/10/05 20:13:53 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,5 +70,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 
 char	*ft_itoa(int n);
+
+char	**ft_split(char const *s, char c);
 
 #endif
