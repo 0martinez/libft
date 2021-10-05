@@ -6,7 +6,7 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 15:59:47 by omartine          #+#    #+#             */
-/*   Updated: 2021/10/01 21:34:14 by omartine         ###   ########.fr       */
+/*   Updated: 2021/10/05 18:22:00 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ static void	ft_aux(long n, int j, char *aux)
 	{
 		aux[j-- - 1] = (n % 10) + '0';
 		n = n / 10;
-		//printf("%c", aux[j + 1]);
 	}
 }
 

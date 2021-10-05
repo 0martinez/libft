@@ -6,11 +6,57 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 20:42:15 by omartine          #+#    #+#             */
-/*   Updated: 2021/09/30 16:15:19 by omartine         ###   ########.fr       */
+/*   Updated: 2021/10/05 18:41:22 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static size_t	ft_aux(char const *s1, char const *set, size_t j, size_t i)
+{
+	while (set[j] != 0 && s1[i] != 0)
+	{
+		if (set[j] != s1[i])
+			j++;
+		else
+		{
+			j = 0;
+			i++;
+		}
+	}
+	return (i);
+}
+
+static size_t	ft_aux2(char const *s1, char const *set, size_t j, size_t z)
+{
+	j = ft_strlen((const char *)s1);
+	while (set[z] != 0)
+	{
+		if (set[z] != s1[j - 1])
+			z++;
+		else
+		{
+			z = 0;
+			j--;
+		}
+	}
+	return (j);
+}
+
+static char	*assignment(char *aux, char const *s1, size_t i, size_t j)
+{
+	size_t	z;
+
+	z = 0;
+	while (i < j)
+	{
+		aux[z] = s1[i];
+		i++;
+		z++;
+	}
+	aux[z] = 0;
+	return (aux);
+}
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -22,50 +68,29 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	j = 0;
 	z = 0;
-	while (set[j] != 0)
+	if (s1 == 0)
+		return (0);
+	i = ft_aux(s1, set, j, i);
+	if (s1[i] == 0)
 	{
-		//printf("%zu", j);
-		if (set[j] != s1[i])
-			j++;
-		else
-		{
-			//printf(" ");
-			j = 0;
-			i++;
-		}
+		aux = (char *) malloc(sizeof(char) * 1);
+		if (!aux)
+			return (0);
+		aux[0] = 0;
+		return (aux);
 	}
-	//printf(" %zu", j);
-	j = ft_strlen((const char *)s1);
-	while (set[z] != 0)
-	{
-		if (set[z] != s1[j])
-			z++;
-		else
-		{
-			z = 0;
-			j--;
-		}
-	}
-	aux = (char *) malloc (sizeof(char) * (j - z + 1));
+	j = ft_aux2(s1, set, j, z);
+	aux = (char *) malloc (sizeof(char) * (j - i + 1));
 	if (!aux)
 		return (0);
-	z = 0;
-	//printf("%zu", z);
-	while (i <= j)
-	{
-		aux[z] = s1[i];
-		i++;
-		z++;
-	}
-	aux[j] = 0;
-	printf("%s", aux);
-	return (aux);
+	return (aux = assignment(aux, s1, i, j));
 }
+/*
 int	main(void)
 {
-	char *s1 = "   \t  \n\n \t\t  \n\n\nHello \t  Please\n Trim me !";
+	char *s1 = "  \t \t \n   \n\n\n\t";
 
 	char *s2 = ft_strtrim(s1, " \n\t");
-	//printf("%s", s2);
+	printf("%d", strcmp("", s2));
 	return 0;
-}
+}*/
