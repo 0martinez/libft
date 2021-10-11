@@ -6,7 +6,7 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 20:30:20 by omartine          #+#    #+#             */
-/*   Updated: 2021/10/07 20:12:04 by omartine         ###   ########.fr       */
+/*   Updated: 2021/10/11 20:35:30 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,5 +91,11 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
+
+t_list	*ft_lstnew(void *cont);
+
+int		ft_lstsize(t_list *lst);
+
+t_list	*ft_lstlast(t_list *lst);
 
 #endif
