@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/11 19:50:31 by omartine          #+#    #+#             */
-/*   Updated: 2021/10/12 17:42:32 by omartine         ###   ########.fr       */
+/*   Created: 2021/10/12 19:12:24 by omartine          #+#    #+#             */
+/*   Updated: 2021/10/12 20:12:28 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstclear(t_list **lst, void (*del)(void	*))
 {
-	if (new == 0)
-		return ;
+	int	i;
+
+	i = 1;
 	if (lst)
-		return ;
+	{
+		while (lst[i] != 0)
+		{
+			del((lst[i]));
+			free(lst[i]);
+			i++;
+		}
+	}
 }
