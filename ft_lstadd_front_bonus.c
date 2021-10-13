@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/12 18:47:51 by omartine          #+#    #+#             */
-/*   Updated: 2021/10/12 19:15:21 by omartine         ###   ########.fr       */
+/*   Created: 2021/10/11 19:50:31 by omartine          #+#    #+#             */
+/*   Updated: 2021/10/13 21:15:45 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (lst)
-	{
-		del(lst->content);
-		free(lst->content);
-	}
+	*lst = new;
 }

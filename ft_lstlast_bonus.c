@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/11 19:50:31 by omartine          #+#    #+#             */
-/*   Updated: 2021/10/12 17:42:32 by omartine         ###   ########.fr       */
+/*   Created: 2021/10/11 20:30:43 by omartine          #+#    #+#             */
+/*   Updated: 2021/10/13 21:15:40 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+t_list	*ft_lstlast(t_list *lst)
 {
-	if (new == 0)
-		return ;
 	if (lst)
-		return ;
+	{
+		while (lst->next != 0)
+			lst = lst->next;
+		return (lst);
+	}
+	return (0);
 }
