@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 19:12:24 by omartine          #+#    #+#             */
-/*   Updated: 2021/10/12 20:12:28 by omartine         ###   ########.fr       */
+/*   Updated: 2021/10/14 21:23:58 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,15 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void	*))
 {
-	int	i;
-
-	i = 1;
-	if (lst)
+	if (*lst == 0)
+		free(*lst);
+	else
 	{
-		while (lst[i] != 0)
+		while (*lst != 0)
 		{
-			del((lst[i]));
-			free(lst[i]);
-			i++;
+			del((*lst)->content);
+			free(*lst);
+			*lst = (*lst)->next;
 		}
 	}
 }

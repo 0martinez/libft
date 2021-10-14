@@ -6,7 +6,7 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 17:24:12 by omartine          #+#    #+#             */
-/*   Updated: 2021/10/13 21:15:46 by omartine         ###   ########.fr       */
+/*   Updated: 2021/10/14 18:06:42 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,13 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	while (*lst != 0)
+	t_list	*aux;
+
+	if (*lst == 0)
+		*lst = new;
+	else
 	{
-		if (*lst + 1 == 0)
-			*lst = new;
-		*lst = *lst + 1;
+		aux = ft_lstlast(*lst);
+		aux->next = new;
 	}
 }
