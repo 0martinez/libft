@@ -93,11 +93,11 @@ char	**ft_split(char const *s, char c)
 	while (i < adblas)
 	{
 		in = position(s, in, c, 1);
-		fin = position(s, in, c, 0);
-		if (!aux[i])
-			return (0);
+		//fin = position(s, in, c, 0);
+		/*if (!aux[i])
+			return (0);*/
 		//aux[i] = (char *) malloc(sizeof(char) * (fin - in + 1));
-		aux[i] = word(s, in, fin);
+		aux[i] = word(s, in, fin = position(s, in, c, 0));
 		if (!aux[i])
 			return (0);
 		in = fin;
