@@ -6,7 +6,7 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 17:35:19 by omartine          #+#    #+#             */
-/*   Updated: 2021/10/05 18:21:20 by omartine         ###   ########.fr       */
+/*   Updated: 2021/10/16 19:08:25 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,16 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
-	size_t	j;
-	size_t	flg;
+	int	i;
 
 	i = 0;
-	j = 0;
-	flg = 0;
-	while (s[i] != 0)
-	{
-		if (s[i] == c)
-		{
-			j = i;
-			flg++;
-		}
+	while (s[i])
 		i++;
-		if (s[i] == c)
-		{
-			j = i;
-			flg++;
-		}
+	while (i >= 0)
+	{
+		if (s[i] == (char )c)
+			return ((char *)s + i);
+		i--;
 	}
-	if (flg != 0)
-		return ((char *)s + j);
 	return (0);
 }

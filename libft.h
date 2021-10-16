@@ -6,7 +6,7 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 20:30:20 by omartine          #+#    #+#             */
-/*   Updated: 2021/10/15 17:23:51 by omartine         ###   ########.fr       */
+/*   Updated: 2021/10/16 18:15:57 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 
 void	*ft_memset(void *str, int c, int size);
 
-char	ft_strchr(char *str, char x);
+char	*ft_strchr(const char *str, int x);
 
 size_t	ft_strlen(const char *x);
 

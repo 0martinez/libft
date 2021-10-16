@@ -6,7 +6,7 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 19:06:46 by omartine          #+#    #+#             */
-/*   Updated: 2021/09/27 20:47:45 by omartine         ###   ########.fr       */
+/*   Updated: 2021/10/16 20:54:49 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strnstr(const char *str, const char *dst, size_t len)
 			i++;
 		}
 		if (j == ft_strlen((char *)dst))
-			break ;
+			return ((char *)str + (i - j));
 		j = 0;
 		i++;
 	}

@@ -6,13 +6,11 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 18:43:05 by omartine          #+#    #+#             */
-/*   Updated: 2021/09/24 17:37:43 by omartine         ###   ########.fr       */
+/*   Updated: 2021/10/16 18:57:47 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *str, int x)
 {
@@ -21,19 +19,19 @@ char	*ft_strchr(const char *str, int x)
 	i = 0;
 	while (str[i] != 0)
 	{
-		if (str[i] == x)
+		if (str[i] == (char )x)
 			return ((char *)str + i);
 		i++;
-		if (str[i] == x)
-			return ((char *)str + i);
 	}
+	if (str[i] == (char )x)
+		return ((char *)str + i);
 	return (0);
 }
 /*
 int	main(void)
 {
-	char	a[] = "abcde";
-	printf("%s\n", ft_strchr(a, 'b'));
-	printf("%s", strchr(a, 'b'));
+	char	a[] = "tripouille";
+	printf("%s\n", ft_strchr(a, 't' + 256));
+	printf("%s", strchr(a, 't' + 256));
 	return (0);
 }*/

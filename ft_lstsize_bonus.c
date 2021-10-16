@@ -6,7 +6,7 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 19:53:47 by omartine          #+#    #+#             */
-/*   Updated: 2021/10/13 21:15:36 by omartine         ###   ########.fr       */
+/*   Updated: 2021/10/16 19:24:12 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,10 @@ int	ft_lstsize(t_list *lst)
 {
 	int		i;
 
+	if (!lst)
+		return (0);
 	i = 0;
-	while (lst != 0)
+	while (lst)
 	{
 		lst = lst->next;
 		i++;

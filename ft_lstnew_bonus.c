@@ -6,7 +6,7 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 20:32:22 by omartine          #+#    #+#             */
-/*   Updated: 2021/10/13 21:15:38 by omartine         ###   ########.fr       */
+/*   Updated: 2021/10/16 20:39:35 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 t_list	*ft_lstnew(void *cont)
 {
-	t_list	*test;
+	t_list	*aux;
 
-	test = (t_list *) malloc(sizeof(test));
-	if (!test)
+	aux = (t_list *) malloc(sizeof(t_list));
+	if (!aux)
 		return (0);
-	test->content = cont;
-	test->next = 0;
-	return (test);
+	aux->content = cont;
+	aux->next = 0;
+	return (aux);
 }
