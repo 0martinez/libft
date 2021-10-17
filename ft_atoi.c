@@ -15,7 +15,7 @@
 int	ft_atoi(const char *str)
 {
 	int	simb;
-	int	num;
+	unsigned long	num;
 	int	i;
 
 	i = 0;
@@ -35,14 +35,14 @@ int	ft_atoi(const char *str)
 		num = (num * 10) + (str[i] - '0');
 		i++;
 	}
-	return (simb * num);
+	return ((int )simb * num);
 }
 /*
 int main()
 {
-	char a[] = "99999999999999999999999999";
-	char a[] = "+99999999999999999999999999999999999999999999999999999999999";
+	char a[] = "-214748364789999999999a999999999";
+	char b[] = "-214748364789999999999a999999999";
 	printf("%d\n", ft_atoi(a));
-	printf("%d", atoi(a));
+	printf("%d", atoi(b));
 	return 0;
 }*/
