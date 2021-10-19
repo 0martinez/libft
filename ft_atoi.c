@@ -6,7 +6,7 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 19:10:01 by omartine          #+#    #+#             */
-/*   Updated: 2021/09/27 21:17:33 by omartine         ###   ########.fr       */
+/*   Updated: 2021/10/19 18:03:18 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_atoi(const char *str)
 {
 	int	simb;
-	unsigned long	num;
+	int	num;
 	int	i;
 
 	i = 0;
@@ -35,7 +35,7 @@ int	ft_atoi(const char *str)
 		num = (num * 10) + (str[i] - '0');
 		i++;
 	}
-	return ((int )simb * num);
+	return (simb * num);
 }
 /*
 int main()

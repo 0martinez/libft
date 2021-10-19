@@ -6,7 +6,7 @@
 #    By: omartine <omartine@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/15 18:13:07 by omartine          #+#    #+#              #
-#    Updated: 2021/10/15 21:08:46 by omartine         ###   ########.fr        #
+#    Updated: 2021/10/19 17:56:17 by omartine         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ BONUS_O = $(BONUS_S:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-			ar  rcs $(NAME) $(OBJS)
+			ar rcs $(NAME) $(OBJS)
 
 bonus:		$(NAME) $(BONUS_O)
 			ar rcs $(NAME) $(BONUS_O)
