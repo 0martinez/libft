@@ -17,6 +17,11 @@ char	*ft_strnstr(const char *str, const char *dst, size_t len)
 	size_t	i;
 	size_t	j;
 
+	
+	if (!str || !dst)
+		return (0);
+	if (!dst[0])
+		return ((char *)str);
 	i = 0;
 	j = 0;
 	while (i < len && str[i] != 0)
