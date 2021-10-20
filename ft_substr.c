@@ -6,7 +6,7 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 18:32:48 by omartine          #+#    #+#             */
-/*   Updated: 2021/10/16 20:20:17 by omartine         ###   ########.fr       */
+/*   Updated: 2021/10/19 21:10:08 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,3 +55,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (aux);
 	return (aux);
 }
+/*
+int main(void)
+{
+	char const a[] = "asgvhga";
+	unsigned int i = 0;
+	size_t len = 123123213;
+	char *aux;
+	printf("%s", ft_substr(a, i, len));
+	return (0);
+}*/
