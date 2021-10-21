@@ -6,7 +6,7 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 18:50:48 by omartine          #+#    #+#             */
-/*   Updated: 2021/10/16 18:00:32 by omartine         ###   ########.fr       */
+/*   Updated: 2021/10/21 17:14:24 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,20 @@ static int	position(char const *s, int pos, char c, int flg)
 	while (s[pos] != c && s[pos] != 0)
 		pos++;
 	return (pos);
+}
+
+static void	*free_split(char **aux, int words)
+{
+	int	i;
+
+	i = 0;
+	while (i < words)
+	{
+		free(aux[i]);
+		i++;
+	}
+	free(aux);
+	return (0);
 }
 
 static char	*word(char const *s, int in, int fin)
@@ -81,7 +95,7 @@ char	**ft_split(char const *s, char c)
 		in = position(s, in, c, 1);
 		aux[i] = word(s, in, position(s, in, c, 0));
 		if (!aux[i])
-			return (0);
+			return (free_split(aux, count));
 		in = position(s, in, c, 0);
 		i++;
 	}
