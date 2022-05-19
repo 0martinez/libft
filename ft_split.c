@@ -6,26 +6,31 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 18:50:48 by omartine          #+#    #+#             */
-/*   Updated: 2021/10/21 17:14:24 by omartine         ###   ########.fr       */
+/*   Updated: 2022/05/19 20:12:41 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	wordcount(char const *s, int in, int i, char c)
+static size_t	wordcount(char const *s, char c)
 {
-	while (s[in] != 0)
+	int	n_words;
+	int	i;
+
+	n_words = 0;
+	i = 0;
+	while (s[i] != 0)
 	{
-		if (s[in] == c)
-			in++;
+		if (s[i] == c)
+			i++;
 		else
 		{
-			i++;
-			while (s[in] != c && s[in] != 0)
-				in++;
+			n_words++;
+			while (s[i] != c && s[i] != 0)
+				i++;
 		}
 	}
-	return (i);
+	return (n_words);
 }
 
 static int	position(char const *s, int pos, char c, int flg)
@@ -85,7 +90,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	if (!s)
 		return (0);
-	count = wordcount(s, in, i, c);
+	count = wordcount(s, c);
 	aux = (char **) malloc(sizeof(char *) * (count + 1));
 	if (!aux)
 		return (0);
@@ -101,17 +106,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (aux);
 }
-/*
-int	main(void)
-{
-	char *s = "split  ||this|for|me|||||!|";
-	char **aux;
-	aux = ft_split(s, '|');
-	int i = 0;
-	while (aux[i] != 0)
-	{
-		printf("%s\n", aux[i]);
-		i++;
-	}
-	return (0);
-}*/

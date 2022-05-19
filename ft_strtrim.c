@@ -6,7 +6,7 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 20:42:15 by omartine          #+#    #+#             */
-/*   Updated: 2021/10/05 18:41:22 by omartine         ###   ########.fr       */
+/*   Updated: 2022/05/19 20:13:53 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,12 +85,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (0);
 	return (aux = assignment(aux, s1, i, j));
 }
-/*
-int	main(void)
-{
-	char *s1 = "  \t \t \n   \n\n\n\t";
-
-	char *s2 = ft_strtrim(s1, " \n\t");
-	printf("%d", strcmp("", s2));
-	return 0;
-}*/

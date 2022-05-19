@@ -6,7 +6,7 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 18:16:04 by omartine          #+#    #+#             */
-/*   Updated: 2021/09/23 18:50:44 by omartine         ###   ########.fr       */
+/*   Updated: 2022/05/19 20:13:35 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,22 +30,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		i++;
 	return (i);
 }
-/*
-void	test(int size)
-{
-	char	string[] = "Hello there, Venus";
-	char	buffer[19];
-	int		r;
-
-	r = ft_strlcpy(buffer,string,size);
-	printf("Copied '%s' into '%s', length %d\n", string, buffer, r);
-}
-
-int main(void)
-{
-	test(19);
-	test(10);
-	test(1);
-	test(0);
-	return(0);
-}*/

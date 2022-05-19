@@ -6,7 +6,7 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 15:59:47 by omartine          #+#    #+#             */
-/*   Updated: 2021/10/05 18:22:00 by omartine         ###   ########.fr       */
+/*   Updated: 2022/05/19 20:09:19 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,3 @@ char	*ft_itoa(int n)
 	aux[j - 1] = 0;
 	return (aux);
 }
-/*
-int	main(void)
-{
-	char *i1 = ft_itoa(0);
-	printf("%s", i1);
-	return (0);
-}*/

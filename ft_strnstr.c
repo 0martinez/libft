@@ -6,7 +6,7 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 19:06:46 by omartine          #+#    #+#             */
-/*   Updated: 2021/10/19 17:11:23 by omartine         ###   ########.fr       */
+/*   Updated: 2022/05/19 20:13:46 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,3 @@ char	*ft_strnstr(const char *str, const char *dst, size_t len)
 	}
 	return (0);
 }
-/*
-int	main(void)
-{
-	char *s1 = "AAAAAAAAAAAA";
-	size_t max = strlen(s1);
-	char *i1 = strnstr(s1, s1, max);
-	char *i2 = ft_strnstr(s1, s1, max);
-	printf("%s", i2);
-	return (0);
-}*/

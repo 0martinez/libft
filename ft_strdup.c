@@ -6,7 +6,7 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 17:00:24 by omartine          #+#    #+#             */
-/*   Updated: 2021/10/13 17:16:36 by omartine         ###   ########.fr       */
+/*   Updated: 2022/05/19 20:13:20 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,3 @@ char	*ft_strdup(const char *s)
 	aux[i] = 0;
 	return (aux);
 }
-/*
-int main(void)
-{
-	char *str;
-	char *tmp = "I malloc so I am.";
-
-	printf("%s", str = ft_strdup(tmp));
-	return 0;
-}*/

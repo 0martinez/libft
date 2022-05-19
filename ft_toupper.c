@@ -6,7 +6,7 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 19:58:18 by omartine          #+#    #+#             */
-/*   Updated: 2021/09/21 20:03:16 by omartine         ###   ########.fr       */
+/*   Updated: 2022/05/19 20:13:59 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,3 @@ int	ft_toupper(int x)
 		return (x - 32);
 	return (x);
 }
-
-/*int	main(void)
-{
-	char	a;
-
-	a = 'A';
-	printf("%c", ft_toupper(a));
-	return (0);
-}*/
